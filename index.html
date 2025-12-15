@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxperts Taxation - Professional Accounting Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <style>
+      .hero {
+        text-align: center;
+      }
+
+      .service-icon {
+        font-size: 3rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      article {
+        flex: 1 1 280px;
+      }
+
+      .success-message {
+        display: none;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .success-message.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <ul>
+          <li><h1>Taxperts Taxation</h1></li>
+          <li>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1>Professional Accounting Solutions You Can Trust</h1>
+        <p>
+          Expert tax preparation, bookkeeping, and financial planning for
+          individuals and businesses
+        </p>
+        <div class="cta-buttons">
+          <button
+            onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+          >
+            Schedule Consultation
+          </button>
+          <button
+            role="button"
+            class="secondary"
+            onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Services Section -->
+      <section id="services">
+        <h2>Our Services</h2>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+          <article>
+            <div class="service-icon">📋</div>
+            <h3>Tax Preparation</h3>
+            <p>
+              Comprehensive tax return preparation for individuals and
+              businesses. Maximize deductions and minimize your tax burden.
+            </p>
+          </article>
+
+          <article>
+            <div class="service-icon">📊</div>
+            <h3>Bookkeeping</h3>
+            <p>
+              Complete bookkeeping services including accounts payable, accounts
+              receivable, and financial statement preparation.
+            </p>
+          </article>
+
+          <article>
+            <div class="service-icon">💰</div>
+            <h3>Financial Planning</h3>
+            <p>
+              Strategic financial planning to help you achieve your long-term
+              goals and build wealth for the future.
+            </p>
+          </article>
+
+          <article>
+            <div class="service-icon">🏢</div>
+            <h3>Business Accounting</h3>
+            <p>
+              Full-service accounting solutions tailored for small and
+              medium-sized businesses. Keep your finances organized and
+              compliant.
+            </p>
+          </article>
+
+          <article>
+            <div class="service-icon">📈</div>
+            <h3>Payroll Services</h3>
+            <p>
+              Reliable payroll processing, tax filing, and compliance management
+              for your employees.
+            </p>
+          </article>
+
+          <article>
+            <div class="service-icon">✅</div>
+            <h3>Audit Support</h3>
+            <p>
+              Representation and support during audits. We'll help you navigate
+              the process with confidence.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Taxperts</h2>
+        <p>
+          With over 20 years of experience in accounting and tax services,
+          Taxperts has helped hundreds of clients achieve their financial goals.
+          We pride ourselves on providing personalized service, attention to
+          detail, and expert guidance tailored to each client's unique
+          situation.
+        </p>
+        <p>
+          Our team of certified accountants is committed to staying current with
+          the latest tax laws and accounting standards to ensure you receive the
+          best possible service and advice. We believe in building long-term
+          relationships with our clients based on trust, integrity, and results.
+        </p>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+          <article>
+            <p>
+              "Taxperts transformed how I manage my business finances. Their
+              attention to detail and proactive approach has saved me thousands
+              in taxes. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              — Sarah Johnson, Small Business Owner
+            </div>
+          </article>
+
+          <article>
+            <p>
+              "Working with Taxperts gave me peace of mind knowing my taxes are
+              handled by professionals. They made the entire process stress-free
+              and easy to understand."
+            </p>
+            <div class="testimonial-author">— Michael Chen, Freelancer</div>
+          </article>
+
+          <article>
+            <p>
+              "I've been a client for 8 years now. Their team consistently
+              provides excellent service and valuable financial advice. They're
+              more than just accountants—they're trusted advisors."
+            </p>
+            <div class="testimonial-author">
+              — Robert Williams, Manufacturing Company
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <div
+          style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem"
+        >
+          <div style="flex: 1 1 250px">
+            <h3>📞 Phone</h3>
+            <p>+61 (04) 21 925 323</p>
+          </div>
+          <div style="flex: 1 1 250px">
+            <h3>📧 Email</h3>
+            <p>taxpertstaxation@gmail.com</p>
+          </div>
+          <div style="flex: 1 1 250px">
+            <h3>📍 Location</h3>
+            <p>Schofields 2762, NSW Australia</p>
+          </div>
+        </div>
+
+        <div id="successMessage" class="success-message">
+          ✓ Thank you! Your message has been sent successfully. We'll get back
+          to you soon.
+        </div>
+
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/mblnbbpa"
+          method="POST"
+        >
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", function (e) {
+              setTimeout(function () {
+                document.getElementById("successMessage").classList.add("show");
+                document.getElementById("contactForm").reset();
+
+                setTimeout(function () {
+                  document
+                    .getElementById("successMessage")
+                    .classList.remove("show");
+                }, 4000);
+              }, 500);
+            });
+        </script>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2024 Taxperts - Professional Accounting Services. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
