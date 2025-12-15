@@ -14,31 +14,104 @@
     />
     <style>
       :root {
-        --primary-color: #1e5a96;
+        --primary: #1e5a96;
         --primary-light: #2980b9;
-        --accent-color: #27ae60;
+        --accent: #27ae60;
         --light-bg: #f5f7fa;
-        --text-color: #2c3e50;
+        --text: #2c3e50;
+        --border: #e0e0e0;
       }
 
-      body {
-        --text-color: #2c3e50;
+      h2 {
+        color: var(--primary);
+      }
+
+      h3 {
+        color: var(--text);
+      }
+
+      a {
+        color: var(--primary);
+      }
+
+      a:hover {
+        color: var(--primary-light);
+      }
+
+      button {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+      }
+
+      button:hover {
+        background-color: var(--primary-light) !important;
+        border-color: var(--primary-light) !important;
+      }
+
+      nav {
+        background-color: var(--light-bg);
+        border-bottom: 2px solid var(--border);
+      }
+
+      nav h1 {
+        color: var(--primary);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+        color: var(--text);
+        background: none;
+        border: none;
+        transition: background-color 0.2s ease;
+      }
+
+      nav a:hover {
+        background-color: #e8f0f7;
+        color: var(--primary);
       }
 
       .hero {
         text-align: center;
-        background: linear-gradient(135deg, #1e5a96 0%, #2980b9 100%);
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
         color: white;
         padding: 3rem 1rem;
       }
 
-      .hero h1 {
+      .hero h1,
+      .hero h2 {
         color: white;
       }
 
       .hero p {
         color: #ecf0f1;
         font-size: 1.1rem;
+      }
+
+      .hero button {
+        background-color: var(--accent) !important;
+        border-color: var(--accent) !important;
+        color: white;
+        font-weight: 600;
+      }
+
+      .hero button:hover {
+        background-color: #229954 !important;
+      }
+
+      .hero button.secondary {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border: 2px solid white !important;
+      }
+
+      .hero button.secondary:hover {
+        background-color: rgba(255, 255, 255, 0.3) !important;
       }
 
       .hero-container {
@@ -51,6 +124,7 @@
       .hero-image {
         flex-shrink: 0;
         max-width: 250px;
+        border-radius: 12px;
       }
 
       .hero-content {
@@ -58,93 +132,63 @@
         min-width: 250px;
       }
 
+      .credentials {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+      }
+
+      .credentials img {
+        max-width: 120px;
+        height: auto;
+      }
+
       .service-icon {
         font-size: 3rem;
       }
 
-      .cta-buttons {
+      .services-grid {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
         flex-wrap: wrap;
-      }
-
-      .hero button {
-        background-color: #27ae60;
-        color: white;
-        border: none;
-        font-weight: 600;
-      }
-
-      .hero button:hover {
-        background-color: #229954;
-      }
-
-      .hero button.secondary {
-        background-color: rgba(255, 255, 255, 0.2);
-        border: 2px solid white;
-      }
-
-      .hero button.secondary:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-
-      nav {
-        background-color: #f5f7fa;
-        border-bottom: 2px solid #e0e0e0;
-      }
-
-      nav h1 {
-        color: #1e5a96;
-      }
-
-      nav a {
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius);
-        transition: background-color 0.2s ease;
-        color: #2c3e50;
-      }
-
-      nav a:hover {
-        background-color: #e8f0f7;
-        color: #1e5a96;
-      }
-
-      button:not(.hero button) {
-        background-color: #1e5a96;
-        border-color: #1e5a96;
-      }
-
-      button:not(.hero button):hover {
-        background-color: #2980b9;
-        border-color: #2980b9;
-      }
-
-      h2 {
-        color: #1e5a96;
-      }
-
-      h3 {
-        color: #2c3e50;
-      }
-
-      a:not(.hero a) {
-        color: #1e5a96;
-      }
-
-      a:not(.hero a):hover {
-        color: #2980b9;
       }
 
       article {
         flex: 1 1 280px;
+      }
+
+      .testimonial-author {
+        font-style: italic;
+        color: #666;
+        margin-top: 1rem;
+      }
+
+      .contact-info {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .contact-item {
+        flex: 1 1 250px;
+      }
+
+      .success-message {
+        display: none;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius);
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .success-message.show {
+        display: block;
       }
 
       @media (max-width: 768px) {
@@ -166,24 +210,6 @@
           flex-direction: column;
           gap: 1rem;
         }
-
-        .hero-content {
-          text-align: center;
-        }
-      }
-
-      .success-message {
-        display: none;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-radius: var(--border-radius);
-        background-color: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-
-      .success-message.show {
-        display: block;
       }
     </style>
   </head>
@@ -227,28 +253,17 @@
                 Learn More
               </button>
             </div>
-            <div
-              style="
-                display: flex;
-                gap: 1.5rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2rem;
-              "
-            >
-              <div style="text-align: center">
+            <div class="credentials">
+              <div>
                 <img
                   src="assets/chartered.png"
                   alt="Chartered Accountants Australia + New Zealand"
-                  style="max-width: 120px; height: auto"
                 />
               </div>
-              <div style="text-align: center">
+              <div>
                 <img
                   src="assets/tpracboard.png"
                   alt="Tax Practitioners Board Registered"
-                  style="max-width: 120px; height: auto"
                 />
               </div>
             </div>
@@ -257,7 +272,6 @@
             src="assets/manish.png"
             alt="Manish"
             class="hero-image"
-            style="border-radius: 12px"
           />
         </div>
       </div>
@@ -268,7 +282,7 @@
       <!-- Services Section -->
       <section id="services">
         <h2>Our Services</h2>
-        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+        <div class="services-grid">
           <article>
             <div class="service-icon">📋</div>
             <h3>Tax Preparation</h3>
@@ -347,7 +361,7 @@
       <!-- Testimonials Section -->
       <section id="testimonials">
         <h2>What Our Clients Say</h2>
-        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+        <div class="services-grid">
           <article>
             <p>
               "Taxperts transformed how I manage my business finances. Their
@@ -384,14 +398,12 @@
       <!-- Contact Section -->
       <section id="contact">
         <h2>Get In Touch</h2>
-        <div
-          style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem"
-        >
-          <div style="flex: 1 1 250px">
+        <div class="contact-info">
+          <div class="contact-item">
             <h3>📞 Phone</h3>
             <p><a href="tel:+61421925323">+61 421 925 323</a></p>
           </div>
-          <div style="flex: 1 1 250px">
+          <div class="contact-item">
             <h3>📧 Email</h3>
             <p>
               <a href="mailto:taxpertstaxation@gmail.com"
@@ -399,7 +411,7 @@
               >
             </p>
           </div>
-          <div style="flex: 1 1 250px">
+          <div class="contact-item">
             <h3>📍 Location</h3>
             <p>Schofields 2762, NSW Australia</p>
           </div>
